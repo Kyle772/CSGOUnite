@@ -182,6 +182,7 @@ header {
 
 header .highlight {
     color: #19BD66;
+    font-weight: 700;
 }
 
 .header-top {
@@ -221,3 +222,103 @@ header .highlight {
     height: 40%;
     margin-top: 12px;
 }
+
+/* Sidebar */
+
+.sidebar {
+    position: relative;
+    width: 0;
+    height: calc(100vh - 100px);
+    bottom: 0;
+    left: 0;
+    background-color: #1F2528;
+    z-index: 10;
+    flex-shrink: 0;
+}
+
+.sidebar.extended {
+    width: 300px;
+}
+
+.sidebar > .button-con {
+    position: absolute;
+    right: 0px;
+    width: 50px;
+    background-color: #1F2528;
+    top: calc(33% - 75px);
+    z-index: 50;
+    transform: translateX(50px);
+}
+
+.sidebar > .button-con .button {
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+    filter: brightness(1.7);
+}
+
+.sidebar > .button-con .button:hover, .sidebar > .button-con .button.highlight {
+    filter: brightness(1)
+}
+
+#ChatBut {
+    background: url("/icons/chat.png") center no-repeat;
+}
+
+#ChatBut:hover, #ChatBut.highlight {
+    background: url("/icons/chatActive.png") center no-repeat;
+}
+
+#AffiliateBut {
+    background: url("/icons/aff.png") center no-repeat;
+}
+
+#AffiliateBut:hover, #AffiliateBut.highlight {
+    background: url("/icons/affActive.png") center no-repeat;
+}
+
+#InfoBut {
+    background: url("/icons/info.png") center no-repeat;
+}
+
+#InfoBut:hover, #InfoBut.highlight {
+    background: url("/icons/infoActive.png") center no-repeat;
+}
+
+/* main */ 
+.main {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+.page {
+    position: relative;
+    width: calc(100% + 50px);
+    flex-shrink: 1;
+    flex-grow: 1;
+    height: 100%;
+    background: url(/icons/back.png) left 0px top -100px;
+    background-size: cover;
+    background-color: #1F2528;
+}
+
+.page > .game {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 55vh;
+    padding: 0 30px 0 30px;
+    background-color: rgba(39, 38, 56, .5);
+    color: white;
+}
+
+.page > .boards {
+    position: relative;
+    box-sizing: border-box;
+    background-color: white;
+    width: 100%;
+    left: 0;
+    padding: 0 30px 0 30px;
+    flex-grow: 1;
+}
+
