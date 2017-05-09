@@ -1,2 +1,1 @@
-# AppEngineQS
-This is my quickstart folder for google appengine with JINJA templating
+This is a the default Readme for my quickstart folder for App Engine
