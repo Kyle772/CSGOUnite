@@ -1,6 +1,30 @@
 /* Global decorative/proportions (12 col base) */
 
+/* Fonts */
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(100, 107, 111);
+    font-weight: 700;
+}
 
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+h4 {
+    font-size: .8em;
+}
+
+h5 {
+    font-size: .75em;
+}
 
 body {
     overflow-x: hidden;
@@ -54,6 +78,21 @@ body {
 .rp {
     box-sizing: border-box;
     padding-right: 15px;
+}
+
+.lm {
+    box-sizing: border-box;
+    margin-left: 2.5px;
+}
+
+.rm {
+    box-sizing: border-box;
+    margin-right: 2.5px;
+}
+
+.bm {
+    box-sizing: border-box;
+    margin-bottom: 5px;
 }
 
 .t {
@@ -184,7 +223,6 @@ input {
     box-sizing: border-box;
     -webkit-transition: all 200ms ease-in;
     transition: all 200ms ease-in;
-    border-bottom: 3px solid transparent;
     cursor: pointer;
 }
 
@@ -197,6 +235,11 @@ input {
 
 /* Header */
 
+img.coins {
+    width: 15px;
+    margin: 10px;
+}
+
 header {
     position: relative;
     background-color: #181C21;
@@ -204,7 +247,7 @@ header {
     z-index: 100;
 }
 
-header .highlight, .header-nav .button.highlight {
+header .highlight, .header-nav .button.highlight, .button.highlight  {
     color: #19BD66;
     font-weight: 700;
 }
@@ -256,6 +299,7 @@ header .active {
 .header-top .twitter {
     height: 40%;
     margin-top: 12px;
+    margin-left: 45px;
 }
 
 
@@ -265,12 +309,16 @@ header .active {
     position: fixed;
     width: 0;
     height: 100vh;
+    padding-top: 100px;
+    box-sizing: border-box;
     bottom: 0;
     left: 0;
     background-color: #1F2528;
     z-index: 10;
     -ms-flex-negative: 0;
     flex-shrink: 0;
+    color: white;
+    overflow: hidden;
 }
 
 .sidebar.extended {
@@ -333,6 +381,144 @@ header .active {
     background: url("/icons/infoActive.png") center no-repeat;
 }
 
+.chat > .foot {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+#EmojiBut, #ChatSend, #ChatRulesBut {
+    min-width: 50px;
+    height: 40px;
+    padding: 10px;
+    padding-top: 12px;
+    box-sizing: border-box;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    text-align: center;
+    display: inline-block;
+}
+
+#ChatRulesBut {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.chat .button-con .button:hover {
+    background-color: #1ABE65;
+}
+
+#ChatInp {
+    width: 100%;
+    max-width: 100%;
+    min-height: 60px;
+    height: auto;
+    max-height: 120px;
+    padding: 10px;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    font-weight: 700;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.chat > .foot .button {
+    background-color: rgba(255, 255, 255, .05);
+}
+
+.chat > .foot > .button-con {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.sidebar > .affiliate, .sidebar > .info {
+    padding: 30px;
+}
+
+.affiliate .button-con {
+    margin-top: 15px;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+}
+
+#Referral > input {
+    padding: 8px;
+    margin-right: 5px;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 80%;
+    color: white;
+}
+
+#Referral > .button {
+    padding: 8px;
+}
+
+#Referral > .button:hover {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.affiliate .button-con .button {
+    position: relative;
+    background-color: white;
+    padding: 8px;
+    color: black;
+    -ms-flex-negative: 2;
+    flex-shrink: 2;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+}
+
+.affiliate .button-con h5, .affiliate .button-con p {
+    margin: 0;
+    color: black;
+}
+
+.affiliate .button-con p {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+.affiliate .button-con .button p:first-of-type {
+    font-size: 1.4em;
+    float: left;
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+}
+
+.affiliate .button-con .button img:first-of-type {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 10px;
+}
+
+.affiliate .button-con .button:last-of-type {
+    text-align: center;
+    background-color: #1ABE65;
+    color: white;
+    height: 50px;
+}
+
+.affiliate .button-con .button.col-2:nth-child(even) {
+    border-left: solid 2.5px #202529;
+}
+
+.affiliate .button-con .button.col-2:nth-child(odd) {
+    border-right: solid 2.5px #202529;
+}
 
 /* main */
 
@@ -364,7 +550,7 @@ header .active {
     position: relative;
     box-sizing: border-box;
     width: 100%;
-    min-height: 55vh;
+    min-height: 60vh;
     padding: 0 30px 0 80px;
     background-color: rgba(25, 40, 55, .9);
     color: white;
@@ -444,6 +630,12 @@ body[data-page="flip"] .game {
     width: 75%;
     margin: auto;
     font-weight: 700;
+    color: white;
+}
+
+.flip-con .numbers-con h1 {
+    margin-top: 0;
+    font-size: 3em;
 }
 
 .page > .game > .numbers-con > .numbers {
@@ -499,6 +691,10 @@ div[data-color="black"] {
     left: 0;
 }
 
+.bet-con > .bet-inp > .sub h5 {
+    color: white;
+}
+
 .bet-con > .bet-inp .button {
     display: block;
     padding: 0;
@@ -512,6 +708,18 @@ div[data-color="black"] {
     background-color: #494D56;
     z-index: 5;
 }
+
+body[data-page="roulette"] .bet-con > .bet-inp .button {
+    padding: 8px;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    width: auto;
+    height: 30px;
+    padding-top: 5px;
+    
+}
+
 
 .bet-con .bet-amt {
     width: 80px;
@@ -556,10 +764,8 @@ div[data-color="black"] {
 }
 
 .game > .button.cta {
-    display: inline-block;
     padding: 10px;
     box-sizing: border-box;
-    text-align: center
 }
 
 .game > .button.cta:hover {
@@ -568,7 +774,7 @@ div[data-color="black"] {
 }
 
 .game > .flip-con {
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .game > .flip-con > .bar {
@@ -601,6 +807,10 @@ div[data-color="black"] {
     background-color: #181C21;
     padding-top: 10px;
     box-sizing: border-box;
+}
+
+.flip-con * {
+    color: white;
 }
 
 /*boards*/

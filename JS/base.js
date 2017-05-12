@@ -1,20 +1,66 @@
-$(document).ready( function (){
+$(document).ready(function () {
     $(".sidebar > .button-con > .button").on("click", function () {
         if ($(".sidebar").hasClass("extended")) {
             if ($(this).hasClass("highlight")) {
-                $(".sidebar").removeClass("extended");   
+                $(".sidebar").removeClass("extended");
                 $(".sidebar > .button-con").removeClass("extended");
-                $(".page").removeClass("extended");   
-                $(this).removeClass("highlight");   
+                $(".page").removeClass("extended");
+                $(this).removeClass("highlight");
             } else {
                 $(".sidebar > .button-con > .button").removeClass("highlight");
                 $(this).addClass("highlight");
             }
         } else {
-            $(".sidebar").addClass("extended");    
-            $(".sidebar > .button-con").addClass("extended");   
-            $(".page").addClass("extended");   
+            $(".sidebar").addClass("extended");
+            $(".sidebar > .button-con").addClass("extended");
+            $(".page").addClass("extended");
             $(this).addClass("highlight");
         }
     });
+    $("#ChatBut").on("click", function () {
+        if ($(".sidebar > .chat").hasClass("hidden")) {
+            $(".sidebar > .chat").removeClass("hidden");
+            $(".sidebar > .affiliate").addClass("hidden");
+            $(".sidebar > .info").addClass("hidden");
+        } else {
+            $(".sidebar > .chat").addClass("hidden");
+            $(".sidebar > .affiliate").addClass("hidden");
+            $(".sidebar > .info").addClass("hidden");
+        }
+    });
+    $("#AffiliateBut").on("click", function () {
+        if ($(".sidebar > .affiliate").hasClass("hidden")) {
+            $(".sidebar > .chat").addClass("hidden");
+            $(".sidebar > .affiliate").removeClass("hidden");
+            $(".sidebar > .info").addClass("hidden");
+        } else {
+            $(".sidebar > .chat").addClass("hidden");
+            $(".sidebar > .affiliate").addClass("hidden");
+            $(".sidebar > .info").addClass("hidden");
+        }
+    });
+    $("#InfoBut").on("click", function () {
+        if ($(".sidebar > .info").hasClass("hidden")) {
+            $(".sidebar > .chat").addClass("hidden");
+            $(".sidebar > .affiliate").addClass("hidden");
+            $(".sidebar > .info").removeClass("hidden");
+        } else {
+            $(".sidebar > .chat").addClass("hidden");
+            $(".sidebar > .affiliate").addClass("hidden");
+            $(".sidebar > .info").addClass("hidden");
+        }
+    });
+});
+
+$(document).on("scroll", function () {
+    var scrollTop       = $(window).scrollTop(),
+        elementOffset   = $('.page').offset().top,
+        distance        = (elementOffset - scrollTop);
+    console.log(distance);
+    if (distance < 100) {
+        $(".sidebar").css("padding-top", distance);
+    }
+    else if (distance <= 0) {
+        $(".sidebar").css("padding-top", "0px");
+    }
 });

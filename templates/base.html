@@ -8,7 +8,7 @@
         {% endblock %}
     </head>
     <body data-page="{{ navTab[1:] }}">
-        <header class=" flex col col-1">
+        <header class="header flex col col-1">
             <div class="header-top constrain flex row spc-btwn">
                 <a href="http://www.twitter.com"><img class="twitter" src="/icons/TwitterWhite.svg"></a>
                 <a class="button">FAQ</a>
@@ -25,18 +25,100 @@
                 <a href="/deposit" class="button {{ 'active' if 'deposit' in navTab }}">Deposit</a>
                 <a href="/withdraw" class="button {{ 'active' if 'withdraw' in navTab }}">Withdraw</a>
                 <a href="/freecoins" class="button {{ 'active' if 'freecoins' in navTab }} highlight">Free Coins</a>
-                <a href="/account" class="coins button {{ 'active' if 'portfolio' in navTab }} highlight">99,999</a>
+                <a href="/account" class="button {{ 'active' if 'portfolio' in navTab }} highlight">
+                    <img class="coins" src="/icons/coins.png">
+                    99,999
+                </a>
             </div>
             
         </header>
         <div class="main flex row">
             <div class="sidebar t flex col">
                 <div class="button-con t flex col">
-                    <div id="ChatBut" class="button">
+                    <div id="ChatBut" class="t button">
                     </div>
-                    <div id="AffiliateBut" class="button">
+                    <div id="AffiliateBut" class="t button">
                     </div>
-                    <div id="InfoBut" class="button">
+                    <div id="InfoBut" class="t button">
+                    </div>
+                </div>
+                <div class="chat hidden">
+                    <div class="head"></div>
+                    <div class="foot flex col wrap spc-btwn col-1">
+                        <textarea id="ChatInp" type="text" placeholder="Message"></textarea>
+                        <div class="button-con flex row">
+                            <div id="ChatRulesBut" class="button">
+                                Chat Rules
+                            </div>
+                            <div id="EmojiBut" class="button">
+                                Emoji
+                            </div>
+                            <div id="ChatSend" class="button">
+                                Send
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="affiliate hidden">
+                    <h4>Refer &amp; Earn</h4>
+                    <p>Due to spam, only white-listed referral codes can be redeemed.</p>
+                    <h4>Redeem Referral Code</h4>
+                    <div id="Referral" class="flex row col-1">
+                        <input type="text" placeholder="Enter code to redeem">
+                        <div class="button highlight">Redeem</div>
+                    </div>
+                    <h4>Your referral code</h4>
+                    <div class="flex row">
+                        <div id="RefCode">KJ2LKJ34BHKK2KHJ</div>
+                    </div>
+                    <div class="button-con flex row wrap spc-btwn">
+                        <div class="button col-1 bm flex row wrap spc-btwn">
+                            <h5 class="col-1">Affiliate Level</h5>
+                            <p>1</p>
+                            <p>0.25 per 100 wagered</p>
+                        </div>
+                        <div class="button col-1 bm flex row wrap spc-btwn">
+                            <h5 class="col-1">Depositors</h5>
+                            <p>0</p>
+                            <p>+ 10 more until level 2</p>
+                        </div>
+                        <div class="button col-2 bm flex row wrap spc-btwn">
+                            <h5 class="col-1">Visitors</h5>
+                            <p>0</p>
+                        </div>
+                        <div class="button col-2 bm flex row wrap spc-btwn">
+                            <h5 class="col-1">Total Bets</h5>
+                            <p>0</p>
+                        </div>
+                        <div class="button col-2 bm flex row wrap spc-btwn">
+                            <h5 class="col-1">Lifetime Earnings</h5>
+                            <p>0</p>
+                            <img class="coins" src="/icons/coins.png">
+                        </div>
+                        <div class="button col-2 bm flex row wrap spc-btwn">
+                            <h5 class="col-1">Available Now</h5>
+                            <p>0</p>
+                            <img class="coins" src="/icons/coins.png">
+                        </div>
+                        <div class="button col-1 flex row algn-cntr j-cntr" data-color="green">
+                            Collect Earnings
+                        </div>
+                    </div>
+                </div>
+                <div class="info hidden">
+                    <h4>Provably Fair</h4>
+                    <p>CS:GO World employs a single system for verification of bets. Server seeds are hashed and shown before a bet and the user can pick any seed they want. Server seed hashes are...</p>
+                    <h4>Current seed pair</h4>
+                    <p>6S5D48S2D34F564</p>
+                    <h4>Future seed hash</h4>
+                    <p>5S54D65S423S255</p>
+                    <div class="col-2">
+                        <h4>Bets made with pair</h4>
+                        <p>8</p>
+                    </div>
+                    <div class="col-2">
+                        <h4>Client Seed</h4>
+                        <p>N/A</p>
                     </div>
                 </div>
             </div>
