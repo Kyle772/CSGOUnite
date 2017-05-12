@@ -4,8 +4,10 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="/js/base.js" type="text/javascript"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        {% block head %}
+        {% endblock %}
     </head>
-    <body>
+    <body data-page="{{ navTab[1:] }}">
         <header class=" flex col col-1">
             <div class="header-top constrain flex row spc-btwn">
                 <a href="http://www.twitter.com"><img class="twitter" src="/icons/TwitterWhite.svg"></a>
@@ -16,14 +18,14 @@
                 <a class="button">Logout</a>
             </div>
             <div class="header-nav constrain flex row spc-btwn">
-                <a class="button active">Dice</a>
-                <a class="button">Flip</a>
-                <a class="button">Roulette</a>
-                <a class="button">Crash</a>
-                <a class="button">Deposit</a>
-                <a class="button">Withdraw</a>
-                <a class="button highlight">Free Coins</a>
-                <a class="coins button highlight">99,999</a>
+                <a href="/dice" class="button {{ 'active' if 'dice' in navTab }}">Dice</a>
+                <a href="/flip" class="button {{ 'active' if 'flip' in navTab }}">Flip</a>
+                <a href="/roulette" class="button {{ 'active' if 'roulette' in navTab }}">Roulette</a>
+                <a href="/crash" class="button {{ 'active' if 'crash' in navTab }}">Crash</a>
+                <a href="/deposit" class="button {{ 'active' if 'deposit' in navTab }}">Deposit</a>
+                <a href="/withdraw" class="button {{ 'active' if 'withdraw' in navTab }}">Withdraw</a>
+                <a href="/freecoins" class="button {{ 'active' if 'freecoins' in navTab }} highlight">Free Coins</a>
+                <a href="/account" class="coins button {{ 'active' if 'portfolio' in navTab }} highlight">99,999</a>
             </div>
             
         </header>
@@ -39,178 +41,16 @@
                 </div>
             </div>
             <div class="page t flex col">
-                <div class="game">
-                    <div class="head flex row spc-btwn">
-                        <p class="latest">Turn sound off</p>
-                        <p>Rolling in 12 seconds...</p>
-                        <div class="latest flex row spc-btwn">
-                            <p>Latest</p>
-                            <div class="item">13</div>
-                            <div class="item">3</div>
-                            <div class="item">6</div>
-                            <div class="item">7</div>
-                            <div class="item">10</div>
-                        </div>
-                    </div>
-                    <div class="numbers-con flex row">
-                        <div class="numbers flex row">
-                            <div data-color="black" class="item">14</div>
-                            <div data-color="red" class="item">3</div>
-                            <div data-color="black" class="item">7</div>
-                            <div data-color="green" class="item">0</div>
-                            <div data-color="black" class="item">2</div>
-                            <div data-color="red" class="item">9</div>
-                            <div data-color="black" class="item">11</div>
-                            <div data-color="red" class="item">8</div>
-                            <div data-color="black" class="item">1</div>
-                            <div data-color="red" class="item">12</div>
-                            <div data-color="black" class="item">4</div>
-                            <div data-color="red" class="item">6</div>        
-                        </div>
-                    </div>
-                    <div class="bet-con flex row wrap spc-btwn">
-                        <p class="col-1">Bet Amount</p>
-                        <div class="bet-inp flex row">
-                            <input class="bet-amt" type="text">
-                            <div class="button">Clear</div>
-                            <div class="button">Last Bet</div>
-                        </div>
-                        <div class="button">+1</div>
-                        <div class="button">+10</div>
-                        <div class="button">+100</div>
-                        <div class="button">+1000</div>
-                        <div class="button">1/2</div>
-                        <div class="button">x2</div>
-                        <div class="button">Max</div>
-                    </div>
-                    <div class="odds col-1 flex row spc-arnd">
-                        <div data-color="red" class="info col-4">1 to 7 win 2x</div>
-                        <div data-color="green" class="info col-4">0 win 14x</div>
-                        <div data-color="black" class="info col-4">8 to 14 win 2x</div>
-                    </div>
-                </div>
-                <div class="boards">
-                    <div class="board-con flex row">
-                        <div class="col-3 rp">
-                            <p>Highest Red</p>
-                            <div class="user-card top">
-                                <div data-color="red">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <p>Players</p>
-                            <div class="user-card">
-                                <div data-color="red">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <div class="user-card">
-                                <div data-color="red">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <div class="user-card">
-                                <div data-color="red">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <div class="user-card">
-                                <div data-color="red">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <div class="user-card">
-                                <div data-color="red">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <div class="user-card">
-                                <div data-color="red">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                        </div>
-                        <div class="col-3 rp lp">
-                            <p>Highest Green</p>
-                            <div class="user-card top">
-                                <div data-color="green">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <p>Players</p>
-                            <div class="user-card">
-                                <div data-color="green">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <div class="user-card">
-                                <div data-color="green">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <div class="user-card">
-                                <div data-color="green">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <div class="user-card">
-                                <div data-color="green">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <div class="user-card">
-                                <div data-color="green">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <div class="user-card">
-                                <div data-color="green">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                        </div>
-                        <div class="col-3 lp">
-                            <p>Highest Black</p>
-                            <div class="user-card top">
-                                <div data-color="black">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <p>Players</p>
-                            <div class="user-card">
-                                <div data-color="black">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <div class="user-card">
-                                <div data-color="black">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <div class="user-card">
-                                <div data-color="black">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <div class="user-card">
-                                <div data-color="black">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <div class="user-card">
-                                <div data-color="black">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                            <div class="user-card">
-                                <div data-color="black">.</div>
-                                <p class="user">King0291</p>
-                                <p>0.65</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% block game %}
+                {% endblock %}
+                {% block boards %}
+                {% endblock %}
             </div>
+            {% if modal %}
+            <div class="modal t flex col">
+                This is a modal with content!
+            </div>
+            {% endif %}
         </div>
     </body>
 </html>

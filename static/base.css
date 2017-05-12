@@ -160,6 +160,12 @@ input {
     align-items: center;
 }
 
+.j-cntr {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
 .visible {
     display: block !important;
 }
@@ -198,7 +204,7 @@ header {
     z-index: 100;
 }
 
-header .highlight {
+header .highlight, .header-nav .button.highlight {
     color: #19BD66;
     font-weight: 700;
 }
@@ -233,6 +239,8 @@ header .highlight {
     -ms-flex-pack: center;
     justify-content: center;
     box-sizing: border-box;
+    text-decoration: none;
+    color: white;
 }
 
 .header-nav .button:hover,
@@ -350,16 +358,26 @@ header .active {
     padding-left: 300px;
 }
 
+/* Game */
+
 .page > .game {
     position: relative;
     box-sizing: border-box;
     width: 100%;
-    height: 55vh;
+    min-height: 55vh;
     padding: 0 30px 0 80px;
     background-color: rgba(25, 40, 55, .9);
     color: white;
     -ms-flex-negative: 0;
     flex-shrink: 0;
+}
+
+body[data-page="dice"] .game {
+    min-height: calc(100vh - 100px);
+}
+
+body[data-page="flip"] .game {
+    min-height: 65vh;
 }
 
 .page > .game > .head {
@@ -380,14 +398,10 @@ header .active {
 }
 
 .page > .game > .head > .latest .item {
-    padding: 8px;
-    width: 15px;
-    height: 15px;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding-top: 6px;
+    box-sizing: border-box;
     text-align: center;
     background-color: rgba(255, 255, 255, .2);
     margin-left: 5px;
@@ -475,20 +489,43 @@ div[data-color="black"] {
 }
 
 .bet-con > .bet-inp {
-    width: 230px;
+    position: relative;
+}
+
+.bet-con > .bet-inp > .sub {
+    position: absolute;
+    width: 100%;
+    bottom: calc(-20px);
+    left: 0;
+}
+
+.bet-con > .bet-inp .button {
+    display: block;
+    padding: 0;
+    padding-top: 0px;
+    box-sizing: border-box;
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    min-height: 20px;
+    text-align: center;
+    background-color: #494D56;
+    z-index: 5;
 }
 
 .bet-con .bet-amt {
     width: 80px;
-    height: 30px;
+    height: 40px;
     color: white;
     font-size: 1.5em;
     font-weight: 700;
+    margin: 7.5px;
+    z-index: 5;
 }
 
 .bet-con .button {
     color: rgba(255, 255, 255, .6);
-    margin-left: 15px;
+    margin: 7.5px;
 }
 
 .bet-con .button:hover {
@@ -518,6 +555,56 @@ div[data-color="black"] {
     height: 50px;
 }
 
+.game > .button.cta {
+    display: inline-block;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center
+}
+
+.game > .button.cta:hover {
+    -webkit-filter: contrast(1.25);
+    filter: contrast(1.25);
+}
+
+.game > .flip-con {
+    margin-bottom: 20px;
+}
+
+.game > .flip-con > .bar {
+    width: 50%;
+    height: 40px;
+    content: "50%";
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    background-color: #181C21;
+}
+
+.game > .flip-con > .bar::after {
+    width: 50%;
+    height: inherit;
+    display: block;
+    content: "50%";
+    float: right;
+    background-color: #1ABE65;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+ 
+.game > .flip-con > .bar::before {
+    width: 50%;
+    height: inherit;
+    display: block;
+    content: "50%";
+    float: left;
+    background-color: #181C21;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+/*boards*/
+
 .page > .boards {
     position: relative;
     box-sizing: border-box;
@@ -529,6 +616,11 @@ div[data-color="black"] {
     -ms-flex-positive: 1;
     flex-grow: 1;
     min-height: calc(100vh - 50px);
+}
+
+body[data-page="dice"] .boards {
+    min-height: 0;
+    display: none;
 }
 
 .board-con {

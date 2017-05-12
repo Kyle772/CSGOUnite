@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block game %}
+<div class="game flex col no-wrap">
+    <div class="head flex row spc-btwn">
+        <p class="latest">Turn sound off</p>
+        <p id="GameTimer">Rolling in 12 seconds...</p>
+        <div class="latest flex row">
+            <p>Latest</p>
+            <div class="item">13</div>
+            <div class="item">3</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">10</div>
+        </div>
+    </div>
+    <div class="flip-con flex row  j-cntr algn-cntr spc-btwn">
+        <div class="numbers-con flex col algn-cntr col-6">
+            <h5>Bet Elite</h5>
+            <h1>97</h1>
+        </div>
+        <div class="bar col-3" data-perc1="25%" data-perc2="75%"></div>
+        <div class="numbers-con flex col algn-cntr col-6">
+            <h5>Bet Society</h5>
+            <h1>150</h1>
+        </div>
+    </div>
+    <div class="bet-con flex row algn-cntr spc-btwn">
+        <div class="bet-inp flex row spc-btwn">
+            <div class="button">&lt;</div>
+            <input type="text" class="bet-amt">
+            <div class="button">&gt;</div>
+            <div class="sub flex row spc-btwn">
+                <h5>(0.0x)</h5>
+                <h5>(4.0x)</h5>
+            </div>
+        </div>
+        <div class="button">1/2</div>
+        <div class="button">+1000</div>
+        <div class="button">2x</div>
+        <div class="button">Min</div>
+        <div class="button">Max</div>
+    </div>
+</div>
+{% endblock %}
+
+{% block boards %}
+<div class="boards">
+
+</div>
+{% endblock %}

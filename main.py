@@ -70,10 +70,15 @@ class Handler(webapp2.RequestHandler):
 
     def render(self, template, **kw):
         user = self.get_user()
-        self.write(self.render_str(template, user=user, **kw))
+        navTab = self.get_navTab()
+        self.write(self.render_str(template, navTab=navTab, user=user, **kw))
         
     def debug(self, text):
         logging.info(str(text))
+    
+    def get_navTab(self):
+        s = str(self.request.path)
+        return s
     
     # -----
     # --Cookie Handling
@@ -339,6 +344,18 @@ class NotFound(Handler):
 class MainPage(Handler):
     def get(self):
         self.render("base.html")
+
+class Dice(Handler):
+    def get(self):
+        self.render("dice.html")
+        
+class Roulette(Handler):
+    def get(self):
+        self.render("roulette.html")
+        
+class Flip(Handler):
+    def get(self):
+        self.render("flip.html")
         
 class Contact(Handler):
     def get(self):
@@ -364,6 +381,9 @@ class Contact(Handler):
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
+    ('/roulette', Roulette),
+    ('/dice', Dice),
+    ('/flip', Flip),
     ('/success', Success),
     ('/thanks', Thanks),
     ('/404', NotFound),

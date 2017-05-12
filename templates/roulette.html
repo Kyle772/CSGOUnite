@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+
+{% block game %}
+<div class="game">
+    <div class="head flex row spc-btwn">
+        <p class="latest">Turn sound off</p>
+        <p id="GameTimer">Rolling in 12 seconds...</p>
+        <div class="latest flex row spc-btwn">
+            <p>Latest</p>
+            <div class="item">13</div>
+            <div class="item">3</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">10</div>
+        </div>
+    </div>
+    <div class="numbers-con flex row">
+        <div class="numbers flex row">
+            <div data-color="black" class="item">14</div>
+            <div data-color="red" class="item">3</div>
+            <div data-color="black" class="item">7</div>
+            <div data-color="green" class="item">0</div>
+            <div data-color="black" class="item">2</div>
+            <div data-color="red" class="item">9</div>
+            <div data-color="black" class="item">11</div>
+            <div data-color="red" class="item">8</div>
+            <div data-color="black" class="item">1</div>
+            <div data-color="red" class="item">12</div>
+            <div data-color="black" class="item">4</div>
+            <div data-color="red" class="item">6</div>        
+        </div>
+    </div>
+    <div class="bet-con flex row wrap spc-btwn">
+        <p class="col-1">Bet Amount</p>
+        <div class="bet-inp flex row">
+            <input class="bet-amt" type="text">
+            <div class="button">Clear</div>
+            <div class="button">Last Bet</div>
+        </div>
+        <div class="button">+1</div>
+        <div class="button">+10</div>
+        <div class="button">+100</div>
+        <div class="button">+1000</div>
+        <div class="button">1/2</div>
+        <div class="button">x2</div>
+        <div class="button">Max</div>
+    </div>
+    <div class="odds col-1 flex row spc-arnd">
+        <div data-color="red" class="info col-4">1 to 7 win 2x</div>
+        <div data-color="green" class="info col-4">0 win 14x</div>
+        <div data-color="black" class="info col-4">8 to 14 win 2x</div>
+    </div>
+</div>
+{% endblock %}
+{% block boards %}
+<div class="boards">
+    <div class="board-con flex row">
+        <div class="col-3 rp">
+            <p>Highest Red</p>
+            <div class="user-card top">
+                <div data-color="red">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <p>Players</p>
+            <div class="user-card">
+                <div data-color="red">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <div class="user-card">
+                <div data-color="red">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <div class="user-card">
+                <div data-color="red">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <div class="user-card">
+                <div data-color="red">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <div class="user-card">
+                <div data-color="red">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <div class="user-card">
+                <div data-color="red">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+        </div>
+        <div class="col-3 rp lp">
+            <p>Highest Green</p>
+            <div class="user-card top">
+                <div data-color="green">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <p>Players</p>
+            <div class="user-card">
+                <div data-color="green">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <div class="user-card">
+                <div data-color="green">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <div class="user-card">
+                <div data-color="green">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <div class="user-card">
+                <div data-color="green">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <div class="user-card">
+                <div data-color="green">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <div class="user-card">
+                <div data-color="green">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+        </div>
+        <div class="col-3 lp">
+            <p>Highest Black</p>
+            <div class="user-card top">
+                <div data-color="black">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <p>Players</p>
+            <div class="user-card">
+                <div data-color="black">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <div class="user-card">
+                <div data-color="black">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <div class="user-card">
+                <div data-color="black">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <div class="user-card">
+                <div data-color="black">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <div class="user-card">
+                <div data-color="black">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+            <div class="user-card">
+                <div data-color="black">.</div>
+                <p class="user">King0291</p>
+                <p>0.65</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
