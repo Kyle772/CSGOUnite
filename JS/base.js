@@ -7,8 +7,6 @@ $(document).ready(function () {
                 $(".sidebar").removeClass("extended");
                 $(".sidebar > .button-con").removeClass("extended");
                 $(".page").removeClass("extended");
-                $(".game").removeClass("spacing-out");
-                $(".odds").removeClass("spacing-out");
                 $(this).removeClass("highlight");
             } else {
                 // Select button and keep extended (swapping bar)
@@ -20,8 +18,6 @@ $(document).ready(function () {
             $(".sidebar").addClass("extended");
             $(".sidebar > .button-con").addClass("extended");
             $(".page").addClass("extended");
-            $(".game").addClass("spacing-out");
-            $(".odds").addClass("spacing-out");
             $(this).addClass("highlight");
         }
     });
