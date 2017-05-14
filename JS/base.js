@@ -9,7 +9,6 @@ $(document).ready(function () {
                 $(".page").removeClass("extended");
                 $(".game").removeClass("spacing-out");
                 $(".odds").removeClass("spacing-out");
-                $(".board-con").removeClass("spacing-out");
                 $(this).removeClass("highlight");
             } else {
                 // Select button and keep extended (swapping bar)
@@ -23,7 +22,6 @@ $(document).ready(function () {
             $(".page").addClass("extended");
             $(".game").addClass("spacing-out");
             $(".odds").addClass("spacing-out");
-            $(".board-con").addClass("spacing-out");
             $(this).addClass("highlight");
         }
     });
