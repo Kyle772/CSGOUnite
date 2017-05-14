@@ -803,6 +803,7 @@ body[data-page="roulette"] .bet-con > .bet-inp .button {
 .game > .odds {
     position: absolute;
     left: 0;
+    max-width: 1200px;
     bottom: -25px;
     z-index: 5;
     box-sizing: border-box;
