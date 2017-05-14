@@ -357,6 +357,14 @@ class Flip(Handler):
     def get(self):
         self.render("flip.html")
         
+class Crash(Handler):
+    def get(self):
+        self.render("crash.html")
+        
+class Transfer(Handler):
+    def get(self):
+        self.render("transfer.html")
+        
 class Contact(Handler):
     def get(self):
         self.render('contact.html')
@@ -384,6 +392,8 @@ app = webapp2.WSGIApplication([
     ('/roulette', Roulette),
     ('/dice', Dice),
     ('/flip', Flip),
+    ('/crash', Crash),
+    ('/transfer', Transfer),
     ('/success', Success),
     ('/thanks', Thanks),
     ('/404', NotFound),

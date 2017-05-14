@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block game %}
+<div class="game flex col">
+    <div class="flex row no-wrap">
+        <div class="crash-left flex col col-4 j-cnter">
+            <div class="tab-con col-1 flex row">
+                <div data-tab="Manual" class="tab col-2 button active">Manual</div>
+                <div data-tab="Automatic" class="tab col-2 button">Automatic</div>
+            </div>
+            <div class="chart-con flex row j-cntr">
+                <div class="chart flex j-cntr algn-cntr">
+                    Next round in 4.2s
+                </div>
+                <div class="bet-con flex col">
+                    <h5>Bet</h5>
+                    <input class="bet-amt" type="number">
+                    <h5>Auto Cash Out</h5>
+                    <input class="bet-amt" type="number">
+                </div>
+            </div>
+            <div data-color="green" class="button col-3">
+                Cash out @ 1.1400 coins
+            </div>
+            <div class="table-con col-1">
+                <table class="col-1">
+                    <tr>
+                        <th>Bust</th>
+                        <th>@</th>
+                        <th>Bet</th>
+                        <th>Profit</th>
+                        <th>Hash</th>
+                    </tr>
+                    <tr>
+                        <td>21.50x</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><a href="">Hash</a></td>
+                    </tr>
+                    <tr>
+                        <td>21.50x</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><a href="">Hash</a></td>
+                    </tr>
+                    <tr>
+                        <td>21.50x</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><a href="">Hash</a></td>
+                    </tr>
+                    <tr>
+                        <td>21.50x</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><a href="">Hash</a></td>
+                    </tr>
+                    <tr>
+                        <td>21.50x</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><a href="">Hash</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="crash-right">
+            <div class="table-con col-1">
+                <table class="col-1">
+                    <tr>
+                        <th></th>
+                        <th>@</th>
+                        <th>Bet</th>
+                        <th>Profit</th>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Sparklez</td>
+                        <td>-</td>
+                        <td>20.00</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Sparklez</td>
+                        <td>-</td>
+                        <td>20.00</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Sparklez</td>
+                        <td>-</td>
+                        <td>20.00</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Sparklez</td>
+                        <td>-</td>
+                        <td>20.00</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block boards %}
+{% endblock %}
