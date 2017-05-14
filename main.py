@@ -388,7 +388,7 @@ class Contact(Handler):
             self.render('contact.html', error=error, name=name, subj=subj, body=body, email=return_address)
 
 app = webapp2.WSGIApplication([
-    ('/', MainPage),
+    ('/', Dice),
     ('/roulette', Roulette),
     ('/dice', Dice),
     ('/flip', Flip),
