@@ -575,24 +575,23 @@ header .active {
     width: 100%;
     padding-left: calc(50% - 600px + 80px);
     padding-right: calc(50% - 600px + 30px);
-    min-height: 60vh;
     background-color: rgba(37, 48, 53, 0.86);
     color: white;
     -ms-flex-negative: 0;
     flex-shrink: 0;
     clear: both;
+    padding-bottom: 100px;
 }
 
 body[data-page="dice"] .game {
-    min-height: 65vh;
 }
 
 body[data-page="flip"] .game {
-    min-height: 65vh;
+
 }
 
 body[data-page="crash"] .game, body[data-page="transfer"] .game {
-    min-height: 100vh;
+    
 }
 
 .page > .game > .head {
@@ -803,7 +802,9 @@ body[data-page="roulette"] .bet-con > .bet-inp .button {
 .game > .odds {
     position: absolute;
     left: 0;
-    max-width: 1200px;
+    width: 100%;
+    padding-left: calc(50% - 600px + 30px);
+    padding-right: calc(50% - 600px + 30px);
     bottom: -25px;
     z-index: 5;
     box-sizing: border-box;
@@ -1167,22 +1168,14 @@ body[data-page="roulette"] .bet-con > .bet-inp .button {
 }
 
 @media screen and (min-width: 1300px) {
-    .page > .game {
-        padding-left: calc(50% - 600px + 30px);
-        padding-right: calc(50% - 600px + 30px);
-    }
-    .board-con {
+    .page > .game, .board-con, .game > .odds {
         padding-left: calc(50% - 600px + 30px);
         padding-right: calc(50% - 600px + 30px);
     }
 }
 
 @media screen and (max-width: 1299px) {
-    .page > .game {
-        padding-left: 80px;
-        padding-right: 30px;
-    }
-    .board-con {
+    .page > .game, .board-con, .game > .odds {
         padding-left: 80px;
         padding-right: 30px;
     }
