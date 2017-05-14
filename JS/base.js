@@ -8,6 +8,7 @@ $(document).ready(function () {
                 $(".sidebar > .button-con").removeClass("extended");
                 $(".page").removeClass("extended");
                 $(".game").removeClass("spacing-out");
+                $(".odds").removeClass("spacing-out");
                 $(".board-con").addClass("spacing-out");
                 $(this).removeClass("highlight");
             } else {
@@ -21,6 +22,7 @@ $(document).ready(function () {
             $(".sidebar > .button-con").addClass("extended");
             $(".page").addClass("extended");
             $(".game").addClass("spacing-out");
+            $(".odds").addClass("spacing-out");
             $(".board-con").addClass("spacing-out");
             $(this).addClass("highlight");
         }

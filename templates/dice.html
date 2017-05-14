@@ -1,7 +1,133 @@
 {% extends 'base.html' %}
 
 {% block game %}
-<div class="game flex col j-cntr algn-cntr">
-    <div id="DiceBut" data-color="green" class="button j-cntr algn-cntr cta col-4">Roll Dice</div>
+<div class="game dice flex col">
+    <div class="tab-con flex row no-wrap">
+        <div class="flex algn-cntr j-cntr tab button col-3 active">Lightning</div>
+        <div class="flex algn-cntr j-cntr tab button col-3">Automatic</div>
+        <div class="flex algn-cntr j-cntr tab button col-3">Fancy Roll</div>
+    </div>
+    <div class="bet-con flex row wrap spc-arnd">
+        <div class="flex col j-cntr">
+            <h5>Bet Amount</h5>
+            <input type="number" class="bet-amt">
+        </div>
+        <div class="button">1/2</div>
+        <div class="button">2x</div>
+        <div class="button">Min</div>
+        <div class="button">Max</div>
+        <div class="flex col j-cntr algn-cntr">
+            <h5>Profit To Win</h5>
+            <span class="flex algn-cntr highlight">
+                <img class="coins" src="/icons/coins.png">
+                0.001
+            </span>
+        </div>
+        <div class="divider col-1"></div>
+        <div class="flex col j-cntr">
+            <h5>Win Chance</h5>
+            <input type="text" class="bet-amt" value="47.5" disabled="disabled">
+        </div>
+        <div class="flex col j-cntr">
+            <h5>Multiplier</h5>
+            <input type="text" class="bet-amt" value="2" disabled="disabled">
+        </div>
+        <div class="flex col j-cntr">
+            <h5>Rolls Per Click</h5>
+            <input type="text" class="bet-amt" value="2" disabled="disabled">
+        </div>
+    </div>
+    <div class="odds flex row no-wrap col-1 spc-arnd">
+        <div data-color="black" class="info col-3">Roll under 47.50 to win</div>
+        <div data-color="green" class="info col-3">You've won 18.63!</div>
+    </div>
+</div>
+{% endblock %}
+
+{% block boards %}
+<div class="boards flex col">
+    <div class="board-con">
+        <div class="tab-con flex row no-wrap">
+            <div class="flex algn-cntr j-cntr tab button col-3 active">All Bets</div>
+            <div class="flex algn-cntr j-cntr tab button col-3">My Bets</div>
+            <div class="flex algn-cntr j-cntr tab button col-3">High Rollers</div>
+        </div>
+        <div class="table-con">
+            <table>
+                <tr>
+                    <th>User</th>
+                    <th>Time</th>
+                    <th>Bet</th>
+                    <th>Payout</th>
+                    <th>Game</th>
+                    <th>Roll</th>
+                    <th>Profit</th>
+                </tr>
+                <tr>
+                    <td>christy</td>
+                    <td>10:08</td>
+                    <td>0.0000654</td>
+                    <td>4.13</td>
+                    <td>>75.99</td>
+                    <td>10.11</td>
+                    <td>+1.02</td>
+                </tr>
+                <tr>
+                    <td>christy</td>
+                    <td>10:08</td>
+                    <td>0.0000654</td>
+                    <td>4.13</td>
+                    <td>>75.99</td>
+                    <td>10.11</td>
+                    <td>+1.02</td>
+                </tr>
+                <tr>
+                    <td>christy</td>
+                    <td>10:08</td>
+                    <td>0.0000654</td>
+                    <td>4.13</td>
+                    <td>>75.99</td>
+                    <td>10.11</td>
+                    <td>+1.02</td>
+                </tr>
+                <tr>
+                    <td>christy</td>
+                    <td>10:08</td>
+                    <td>0.0000654</td>
+                    <td>4.13</td>
+                    <td>>75.99</td>
+                    <td>10.11</td>
+                    <td>+1.02</td>
+                </tr>
+                <tr>
+                    <td>christy</td>
+                    <td>10:08</td>
+                    <td>0.0000654</td>
+                    <td>4.13</td>
+                    <td>>75.99</td>
+                    <td>10.11</td>
+                    <td>+1.02</td>
+                </tr>
+                <tr>
+                    <td>christy</td>
+                    <td>10:08</td>
+                    <td>0.0000654</td>
+                    <td>4.13</td>
+                    <td>>75.99</td>
+                    <td>10.11</td>
+                    <td>+1.02</td>
+                </tr>
+                <tr>
+                    <td>christy</td>
+                    <td>10:08</td>
+                    <td>0.0000654</td>
+                    <td>4.13</td>
+                    <td>>75.99</td>
+                    <td>10.11</td>
+                    <td>+1.02</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </div>
 {% endblock %}
